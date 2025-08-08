@@ -27,7 +27,9 @@ EMIP (Eye Movement in Programming) dataset converted to the standardized REPL.et
 - ❌ **Missing** (<50%): Requires attention
 
 ---
+## Reproducibility Spider Graph
 
+![Reproducibility Spider Graph](outputs/score.png)
 
 | Study Component | Score |
 |----------------|-------|
