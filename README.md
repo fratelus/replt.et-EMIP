@@ -4,71 +4,42 @@ EMIP (Eye Movement in Programming) dataset converted to the standardized REPL.et
 
 ## Template Compliance Analysis
 
-Run `python3 utils/update_readme_with_assessment.py` to update this analysis with your current template status.
+## 📋 Compliance Checklist
 
-### Research Standards Compliance
+**Status**: In Progress (Good Progress)  
+**Overall Compliance**: 6/10 criteria met (60.0%)
 
-```
-TEMPLATE COMPLIANCE STATUS
+### Component Scores:
+- ✅ **Study Metadata**: 100.0%
+- ✅ **Participant Info**: 100.0%
+- ✅ **Equipment Specs**: 100.0%
+- ✅ **Stimuli & Materials**: 100.0%
+- ⚠️ **Areas of Interest**: 75.0%
+- ⚠️ **Data Quality & Collection**: 75.0%
+- ⚠️ **Data Preprocessing**: 75.0%
+- ❌ **Statistical Analysis**: 50.0%
+- ✅ **Validity Assessment**: 100.0%
+- ✅ **Reproducibility Materials**: 100.0%
 
-FAIR Principles                    iGuidelines Compliance
-├─ [ ] Findable (JSON + metadata)      ├─ [ ] Participant templates
-├─ [ ] Accessible (open formats)       ├─ [ ] Calibration procedures  
-├─ [ ] Interoperable (schemas)         ├─ [ ] Exclusion criteria
-└─ [ ] Reusable (rich metadata)        └─ [x] Quality metrics
+### Legend:
+- ✅ **Complete** (>80%): Publication ready
+- ⚠️ **Partial** (50-80%): Good progress, needs refinement  
+- ❌ **Missing** (<50%): Requires attention
 
-Research Standards                 TRRRACED Framework
-├─ [ ] Study design templates          ├─ [ ] Transparent reporting
-├─ [ ] Equipment specifications        ├─ [x] Replication materials
-├─ [x] Stimuli documentation           ├─ [x] Data availability
-├─ [x] Methodology transparency        └─ [ ] Environment specs  
-└─ [ ] Validity assessment
+---
 
-COMPLIANCE STATUS: 4/17 criteria met
-TEMPLATE STATUS: Empty Template  
-RESULT: Fill template with real study data to achieve compliance
-```
 
-## Reproducibility Spider Graph
+| Study Component | Score |
+|----------------|-------|
+| Study Metadata | 100.0% |
+| Participant Info | 100.0% |
+| Equipment Specs | 100.0% |
+| Stimuli & Materials | 100.0% |
+| Areas of Interest | 75.0% |
+| Data Quality & Collection | 75.0% |
+| Data Preprocessing | 75.0% |
+| Statistical Analysis | 50.0% |
+| Validity Assessment | 100.0% |
+| Reproducibility Materials | 100.0% |
+| **Overall Study Score** | **87.5%** |
 
-![Reproducibility Spider Graph](reproducibility_spider_graph.png)
-
-### Scores by Component
-
-| Template Component | Score | Spider Graph Dimension |
-|-------------------|-------|------------------------|
-| `metadata.json` | 5% | Study Metadata |
-| `participants/` | 5% | Participant Information |
-| `equipment/` | 5% | Equipment Specifications |
-| `stimuli/` | 5% | Stimuli & Materials |
-| `aois/` | 5% | Areas of Interest |
-| `collection/` | 5% | Data Quality |
-| `preprocessing/` | 5% | Data Preprocessing |
-| `analysis/` | 5% | Statistical Analysis |
-| `validity/` | 5% | Validity Assessment |
-| `reproducibility/` | 5% | Reproducibility Materials |
-
-**Overall Template Score: 5.0%** (Empty Template - Fill with Real Study Data)
-
-## Generate Updated Analysis
-
-```bash
-# Install requirements (one-time setup)
-pip install matplotlib numpy
-
-# Update this README with current template status
-python3 utils/update_readme_with_assessment.py
-```
-
-## Citation
-
-```bibtex
-@software{silva2024replet,
-  title = {Repl.ET: Eye Tracking Research Template},
-  author = {Silva, Lucas},
-  year = {2024},
-  url = {https://github.com/fratelus/Repl.ET},
-  version = {2.0.0},
-  note = {Template for reproducible eye tracking research}
-}
-``` 

@@ -9,6 +9,6 @@
 - **preprocessing**: 0.75
 - **analysis**: 0.5
 - **threats**: 1.0
-- **reproducibility**: 0.5
+- **reproducibility**: 1.0
 
 Veja score.png para o gráfico radar.

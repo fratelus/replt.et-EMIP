@@ -7,7 +7,7 @@ import numpy as np
 
 def check_metadata():
     try:
-        with open("ReplET/metadata.json") as f:
+        with open("metadata.json") as f:
             data = json.load(f)
         required = ["study_title", "paradigm", "task_description"]
         if all(k in data and data[k] for k in required):
@@ -20,7 +20,7 @@ def check_metadata():
         return 0
 
 def check_participants():
-    path = "ReplET/participants/participants.json"
+    path = "participants/participants.json"
     if not os.path.exists(path):
         return 0
     try:
@@ -39,7 +39,7 @@ def check_participants():
         return 0
 
 def check_equipment():
-    files = ["ReplET/equipment/tracker_specs.json", "ReplET/equipment/screen_setup.json", "ReplET/equipment/software_env.json"]
+    files = ["equipment/tracker_specs.json", "equipment/screen_setup.json", "equipment/software_env.json"]
     found = sum(os.path.exists(f) for f in files)
     if found == 3:
         return 1.0
@@ -51,9 +51,9 @@ def check_equipment():
         return 0
 
 def check_stimuli():
-    meta = "ReplET/stimuli/stimuli_metadata.json"
-    ann = "ReplET/stimuli/stimuli_annotations.json"
-    raw = "ReplET/stimuli/stimuli_raw"
+    meta = "stimuli/stimuli_metadata.json"
+    ann = "stimuli/stimuli_annotations.json"
+    raw = "stimuli/stimuli_raw"
     score = 0
     if os.path.exists(meta):
         score += 0.4
@@ -64,8 +64,8 @@ def check_stimuli():
     return min(score, 1.0)
 
 def check_aois():
-    aois = "ReplET/aois/aois_definition.json"
-    vis = "ReplET/aois/aois_visualizations"
+    aois = "aois/aois_definition.json"
+    vis = "aois/aois_visualizations"
     if os.path.exists(aois):
         if os.path.isdir(vis) and len(os.listdir(vis)) > 0:
             return 1.0
@@ -75,8 +75,8 @@ def check_aois():
         return 0
 
 def check_data_quality():
-    proto = "ReplET/collection/protocol.json"
-    logs = "ReplET/collection/logs"
+    proto = "collection/protocol.json"
+    logs = "collection/logs"
     if os.path.exists(proto):
         if os.path.isdir(logs) and len(os.listdir(logs)) > 0:
             return 1.0
@@ -86,8 +86,8 @@ def check_data_quality():
         return 0
 
 def check_preprocessing():
-    pre = "ReplET/preprocessing/preprocessing.json"
-    scripts = "ReplET/preprocessing/scripts"
+    pre = "preprocessing/preprocessing.json"
+    scripts = "preprocessing/scripts"
     if os.path.exists(pre):
         if os.path.isdir(scripts) and len(os.listdir(scripts)) > 0:
             return 1.0
@@ -97,20 +97,20 @@ def check_preprocessing():
         return 0
 
 def check_analysis():
-    ana = "ReplET/analysis/analysis.json"
-    tables = "ReplET/analysis/results_tables"
-    vis = "ReplET/analysis/visualizations"
+    ana = "analysis/analysis.json"
+    tables = "analysis/results_tables"
+    vis = "analysis/visualizations"
     score = 0
     if os.path.exists(ana):
         score += 0.5
-    if os.path.isdir(tables) and len(os.listdir(tables)) > 0:
+    if os.path.exists(tables) and len(os.listdir(tables)) > 0:
         score += 0.25
-    if os.path.isdir(vis) and len(os.listdir(vis)) > 0:
+    if os.path.exists(vis) and len(os.listdir(vis)) > 0:
         score += 0.25
     return min(score, 1.0)
 
 def check_threats():
-    val = "ReplET/validity/validity.json"
+    val = "validity/validity.json"
     if os.path.exists(val):
         with open(val) as f:
             data = json.load(f)
@@ -122,7 +122,7 @@ def check_threats():
         return 0
 
 def check_reproducibility():
-    files = ["ReplET/README.md", "ReplET/LICENSE", "ReplET/reproducibility/environment.yml", "ReplET/reproducibility/CITATION.cff", "ReplET/repl_et_checklist.md"]
+    files = ["README.md", "LICENSE", "reproducibility/reproducibility.json", "CITATION.cff"]
     found = sum(os.path.exists(f) for f in files)
     if found == len(files):
         return 1.0
@@ -134,6 +134,123 @@ def check_reproducibility():
         return 0.25
     else:
         return 0
+
+def update_readme_with_assessment(scores, overall_score, png_path):
+    """Update README.md with current assessment results"""
+    try:
+        # Map scores to readable names
+        score_mapping = {
+            "metadata": "Study Metadata",
+            "participants": "Participant Info", 
+            "equipment": "Equipment Specs",
+            "stimuli": "Stimuli & Materials",
+            "aois": "Areas of Interest",
+            "data_quality": "Data Quality & Collection",
+            "preprocessing": "Data Preprocessing",
+            "analysis": "Statistical Analysis",
+            "threats": "Validity Assessment",
+            "reproducibility": "Reproducibility Materials"
+        }
+        
+        # Calculate compliance
+        compliant_criteria = sum(1 for score in scores.values() if score > 0.8)
+        total_criteria = len(scores)
+        compliance_percentage = (compliant_criteria / total_criteria) * 100 if total_criteria > 0 else 0
+        
+        # Determine status
+        if compliance_percentage >= 80:
+            template_status = "Complete"
+            result_message = "Publication Ready"
+        elif compliance_percentage >= 50:
+            template_status = "In Progress"  
+            result_message = "Good Progress"
+        else:
+            template_status = "Starting"
+            result_message = "Empty Template" if compliance_percentage < 30 else "Basic Setup"
+        
+        # Generate checklist markdown
+        checklist_items = []
+        for component, score in scores.items():
+            status = "✅" if score > 0.8 else "⚠️" if score > 0.5 else "❌"
+            readable_name = score_mapping.get(component, component.replace("_", " ").title())
+            checklist_items.append(f"- {status} **{readable_name}**: {score*100:.1f}%")
+        
+        checklist_md = f"""## 📋 Compliance Checklist
+
+**Status**: {template_status} ({result_message})  
+**Overall Compliance**: {compliant_criteria}/{total_criteria} criteria met ({compliance_percentage:.1f}%)
+
+### Component Scores:
+{chr(10).join(checklist_items)}
+
+### Legend:
+- ✅ **Complete** (>80%): Publication ready
+- ⚠️ **Partial** (50-80%): Good progress, needs refinement  
+- ❌ **Missing** (<50%): Requires attention
+
+---
+"""
+        
+        # Generate scores table
+        rows = []
+        for component, score in scores.items():
+            readable_name = score_mapping.get(component, component.replace("_", " ").title())
+            rows.append(f"| {readable_name} | {score*100:.1f}% |")
+        
+        scores_table_md = f"""
+| Study Component | Score |
+|----------------|-------|
+{chr(10).join(rows)}
+| **Overall Study Score** | **{overall_score*100:.1f}%** |
+"""
+        
+        # Read current README
+        readme_path = 'README.md'
+        if os.path.exists(readme_path):
+            with open(readme_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+        else:
+            content = "# Study Assessment\n\n"
+        
+        # Update checklist section
+        import re
+        checklist_pattern = r'(## 📋 Compliance Checklist.*?)(?=##|\Z)'
+        if re.search(checklist_pattern, content, re.DOTALL):
+            content = re.sub(checklist_pattern, checklist_md + '\n', content, flags=re.DOTALL)
+        else:
+            # Find the Template Compliance Analysis section and add after it
+            template_section = "## Template Compliance Analysis"
+            if template_section in content:
+                content = content.replace(template_section, template_section + '\n\n' + checklist_md)
+            else:
+                content += '\n' + checklist_md + '\n'
+        
+        # Update scores table section  
+        scores_pattern = r'(\| Study Component \| Score.*?\*\*Overall Study Score.*?\*\*[^\n]*)'
+        if re.search(scores_pattern, content, re.DOTALL):
+            content = re.sub(scores_pattern, scores_table_md.strip(), content, flags=re.DOTALL)
+        else:
+            # Add scores table after checklist
+            content += '\n' + scores_table_md + '\n'
+        
+        # Update spider graph image
+        spider_pattern = r'!\[Reproducibility Spider Graph\]\([^)]+\)'
+        spider_replacement = f'![Reproducibility Spider Graph]({png_path})'
+        if re.search(spider_pattern, content):
+            content = re.sub(spider_pattern, spider_replacement, content)
+        else:
+            content += f'\n{spider_replacement}\n'
+        
+        # Write updated README
+        with open(readme_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        print(f"📝 README.md updated with assessment results!")
+        print(f"📊 Compliance: {compliant_criteria}/{total_criteria} ({compliance_percentage:.1f}%)")
+        print(f"🏷️ Status: {template_status}")
+        
+    except Exception as e:
+        print(f"⚠️ Warning: Could not update README: {e}")
 
 def main():
     scores = {
@@ -149,10 +266,10 @@ def main():
         "reproducibility": check_reproducibility()
     }
     
-    # Create temporary output directory
-    import tempfile
+    # Create output directory
     import os
-    output_dir = tempfile.mkdtemp(prefix="replet_report_")
+    output_dir = "outputs"
+    os.makedirs(output_dir, exist_ok=True)
     
     # Salva JSON
     json_path = os.path.join(output_dir, "report.json")
@@ -241,6 +358,9 @@ def main():
     # Calculate overall score
     overall_score = sum(scores.values()) / len(scores)
     print(f"\n🏆 Overall Reproducibility Score: {overall_score:.3f}/1.0 ({overall_score*100:.1f}%)")
+    
+    # Update README with assessment
+    update_readme_with_assessment(scores, overall_score, png_path)
 
 if __name__ == "__main__":
     main() 
