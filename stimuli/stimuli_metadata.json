@@ -1,0 +1,77 @@
+{
+  "$schema": "../schemas/stimuli_metadata.schema.json",
+  "stimuli": [
+    {
+      "stimulus_id": "instruction_calibration",
+      "type": "code_image",
+      "description": "EMIP stimulus instruction_calibration",
+      "file_name": "instruction_calibration.jpg"
+    },
+    {
+      "stimulus_id": "instruction_comprehension",
+      "type": "code_image",
+      "description": "EMIP stimulus instruction_comprehension",
+      "file_name": "instruction_comprehension.jpg"
+    },
+    {
+      "stimulus_id": "mupliple_choice_rectangle",
+      "type": "code_image",
+      "description": "EMIP stimulus mupliple_choice_rectangle",
+      "file_name": "mupliple_choice_rectangle.jpg"
+    },
+    {
+      "stimulus_id": "mupliple_choice_vehicle",
+      "type": "code_image",
+      "description": "EMIP stimulus mupliple_choice_vehicle",
+      "file_name": "mupliple_choice_vehicle.jpg"
+    },
+    {
+      "stimulus_id": "rectangle_java",
+      "type": "code_image",
+      "description": "EMIP stimulus rectangle_java",
+      "file_name": "rectangle_java.jpg"
+    },
+    {
+      "stimulus_id": "rectangle_java2",
+      "type": "code_image",
+      "description": "EMIP stimulus rectangle_java2",
+      "file_name": "rectangle_java2.jpg"
+    },
+    {
+      "stimulus_id": "rectangle_python",
+      "type": "code_image",
+      "description": "EMIP stimulus rectangle_python",
+      "file_name": "rectangle_python.jpg"
+    },
+    {
+      "stimulus_id": "rectangle_scala",
+      "type": "code_image",
+      "description": "EMIP stimulus rectangle_scala",
+      "file_name": "rectangle_scala.jpg"
+    },
+    {
+      "stimulus_id": "vehicle_java",
+      "type": "code_image",
+      "description": "EMIP stimulus vehicle_java",
+      "file_name": "vehicle_java.jpg"
+    },
+    {
+      "stimulus_id": "vehicle_java2",
+      "type": "code_image",
+      "description": "EMIP stimulus vehicle_java2",
+      "file_name": "vehicle_java2.jpg"
+    },
+    {
+      "stimulus_id": "vehicle_python",
+      "type": "code_image",
+      "description": "EMIP stimulus vehicle_python",
+      "file_name": "vehicle_python.jpg"
+    },
+    {
+      "stimulus_id": "vehicle_scala",
+      "type": "code_image",
+      "description": "EMIP stimulus vehicle_scala",
+      "file_name": "vehicle_scala.jpg"
+    }
+  ]
+}

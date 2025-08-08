@@ -1,0 +1,25 @@
+{
+  "$schema": "../schemas/analysis.schema.json",
+  "metrics": [
+    "fixation_count",
+    "total_fixation_duration"
+  ],
+  "aoi_based_metrics": [
+    "time_on_line",
+    "transitions_between_lines"
+  ],
+  "statistical_methods": [
+    "descriptive"
+  ],
+  "dependent_variables": [
+    "accuracy",
+    "response_time"
+  ],
+  "software_used": [
+    "python",
+    "pandas"
+  ],
+  "scripts": [
+    "utils/convert_emip_to_replet.py"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "../schemas/software_env.schema.json",
+  "os": "unknown",
+  "experiment_software": "unknown",
+  "tracker_driver_version": "unknown",
+  "python_version": "3",
+  "additional_packages": []
+}

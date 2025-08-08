@@ -1,0 +1,24 @@
+{
+  "$schema": "../schemas/protocol.schema.json",
+  "calibration": {
+    "type": "n-point",
+    "criteria": "default",
+    "recalibration_threshold": "if drift > 1deg",
+    "validation_points": 5
+  },
+  "drift_check": {
+    "interval_minutes": 5,
+    "criteria": "visual inspection",
+    "correction_procedure": "quick recalibration"
+  },
+  "exclusion_criteria": [
+    "incomplete session",
+    "excessive data loss"
+  ],
+  "session_structure": {
+    "practice_trials": 0,
+    "main_trials": 2,
+    "break_intervals": "none"
+  },
+  "instructions_to_participants": "Read code stimuli and answer comprehension questions."
+}

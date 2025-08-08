@@ -1,0 +1,605 @@
+{
+  "$schema": "../schemas/stimuli_annotations.schema.json",
+  "annotations": [
+    {
+      "stimulus_id": "instruction_calibration",
+      "ground_truth": []
+    },
+    {
+      "stimulus_id": "instruction_comprehension",
+      "ground_truth": []
+    },
+    {
+      "stimulus_id": "mupliple_choice_rectangle",
+      "ground_truth": []
+    },
+    {
+      "stimulus_id": "mupliple_choice_vehicle",
+      "ground_truth": []
+    },
+    {
+      "stimulus_id": "rectangle_java",
+      "ground_truth": [
+        {
+          "region": "line_1",
+          "label": "code_line"
+        },
+        {
+          "region": "line_2",
+          "label": "code_line"
+        },
+        {
+          "region": "line_3",
+          "label": "code_line"
+        },
+        {
+          "region": "line_4",
+          "label": "code_line"
+        },
+        {
+          "region": "line_5",
+          "label": "code_line"
+        },
+        {
+          "region": "line_6",
+          "label": "code_line"
+        },
+        {
+          "region": "line_7",
+          "label": "code_line"
+        },
+        {
+          "region": "line_8",
+          "label": "code_line"
+        },
+        {
+          "region": "line_9",
+          "label": "code_line"
+        },
+        {
+          "region": "line_10",
+          "label": "code_line"
+        },
+        {
+          "region": "line_11",
+          "label": "code_line"
+        },
+        {
+          "region": "line_12",
+          "label": "code_line"
+        },
+        {
+          "region": "line_13",
+          "label": "code_line"
+        },
+        {
+          "region": "line_14",
+          "label": "code_line"
+        },
+        {
+          "region": "line_15",
+          "label": "code_line"
+        },
+        {
+          "region": "line_16",
+          "label": "code_line"
+        },
+        {
+          "region": "line_17",
+          "label": "code_line"
+        },
+        {
+          "region": "line_18",
+          "label": "code_line"
+        }
+      ]
+    },
+    {
+      "stimulus_id": "rectangle_java2",
+      "ground_truth": [
+        {
+          "region": "line_1",
+          "label": "code_line"
+        },
+        {
+          "region": "line_2",
+          "label": "code_line"
+        },
+        {
+          "region": "line_3",
+          "label": "code_line"
+        },
+        {
+          "region": "line_4",
+          "label": "code_line"
+        },
+        {
+          "region": "line_5",
+          "label": "code_line"
+        },
+        {
+          "region": "line_6",
+          "label": "code_line"
+        },
+        {
+          "region": "line_7",
+          "label": "code_line"
+        },
+        {
+          "region": "line_8",
+          "label": "code_line"
+        },
+        {
+          "region": "line_9",
+          "label": "code_line"
+        },
+        {
+          "region": "line_10",
+          "label": "code_line"
+        },
+        {
+          "region": "line_11",
+          "label": "code_line"
+        },
+        {
+          "region": "line_12",
+          "label": "code_line"
+        },
+        {
+          "region": "line_13",
+          "label": "code_line"
+        },
+        {
+          "region": "line_14",
+          "label": "code_line"
+        },
+        {
+          "region": "line_15",
+          "label": "code_line"
+        },
+        {
+          "region": "line_16",
+          "label": "code_line"
+        },
+        {
+          "region": "line_17",
+          "label": "code_line"
+        },
+        {
+          "region": "line_18",
+          "label": "code_line"
+        }
+      ]
+    },
+    {
+      "stimulus_id": "rectangle_python",
+      "ground_truth": [
+        {
+          "region": "line_1",
+          "label": "code_line"
+        },
+        {
+          "region": "line_2",
+          "label": "code_line"
+        },
+        {
+          "region": "line_3",
+          "label": "code_line"
+        },
+        {
+          "region": "line_4",
+          "label": "code_line"
+        },
+        {
+          "region": "line_5",
+          "label": "code_line"
+        },
+        {
+          "region": "line_6",
+          "label": "code_line"
+        },
+        {
+          "region": "line_7",
+          "label": "code_line"
+        },
+        {
+          "region": "line_8",
+          "label": "code_line"
+        },
+        {
+          "region": "line_9",
+          "label": "code_line"
+        },
+        {
+          "region": "line_10",
+          "label": "code_line"
+        },
+        {
+          "region": "line_11",
+          "label": "code_line"
+        },
+        {
+          "region": "line_12",
+          "label": "code_line"
+        },
+        {
+          "region": "line_13",
+          "label": "code_line"
+        }
+      ]
+    },
+    {
+      "stimulus_id": "rectangle_scala",
+      "ground_truth": [
+        {
+          "region": "line_1",
+          "label": "code_line"
+        },
+        {
+          "region": "line_2",
+          "label": "code_line"
+        },
+        {
+          "region": "line_3",
+          "label": "code_line"
+        },
+        {
+          "region": "line_4",
+          "label": "code_line"
+        },
+        {
+          "region": "line_5",
+          "label": "code_line"
+        },
+        {
+          "region": "line_6",
+          "label": "code_line"
+        },
+        {
+          "region": "line_7",
+          "label": "code_line"
+        },
+        {
+          "region": "line_8",
+          "label": "code_line"
+        },
+        {
+          "region": "line_9",
+          "label": "code_line"
+        },
+        {
+          "region": "line_10",
+          "label": "code_line"
+        },
+        {
+          "region": "line_11",
+          "label": "code_line"
+        }
+      ]
+    },
+    {
+      "stimulus_id": "vehicle_java",
+      "ground_truth": [
+        {
+          "region": "line_1",
+          "label": "code_line"
+        },
+        {
+          "region": "line_2",
+          "label": "code_line"
+        },
+        {
+          "region": "line_3",
+          "label": "code_line"
+        },
+        {
+          "region": "line_4",
+          "label": "code_line"
+        },
+        {
+          "region": "line_5",
+          "label": "code_line"
+        },
+        {
+          "region": "line_6",
+          "label": "code_line"
+        },
+        {
+          "region": "line_7",
+          "label": "code_line"
+        },
+        {
+          "region": "line_8",
+          "label": "code_line"
+        },
+        {
+          "region": "line_9",
+          "label": "code_line"
+        },
+        {
+          "region": "line_10",
+          "label": "code_line"
+        },
+        {
+          "region": "line_11",
+          "label": "code_line"
+        },
+        {
+          "region": "line_12",
+          "label": "code_line"
+        },
+        {
+          "region": "line_13",
+          "label": "code_line"
+        },
+        {
+          "region": "line_14",
+          "label": "code_line"
+        },
+        {
+          "region": "line_15",
+          "label": "code_line"
+        },
+        {
+          "region": "line_16",
+          "label": "code_line"
+        },
+        {
+          "region": "line_17",
+          "label": "code_line"
+        },
+        {
+          "region": "line_18",
+          "label": "code_line"
+        },
+        {
+          "region": "line_19",
+          "label": "code_line"
+        },
+        {
+          "region": "line_20",
+          "label": "code_line"
+        },
+        {
+          "region": "line_21",
+          "label": "code_line"
+        },
+        {
+          "region": "line_22",
+          "label": "code_line"
+        }
+      ]
+    },
+    {
+      "stimulus_id": "vehicle_java2",
+      "ground_truth": [
+        {
+          "region": "line_1",
+          "label": "code_line"
+        },
+        {
+          "region": "line_2",
+          "label": "code_line"
+        },
+        {
+          "region": "line_3",
+          "label": "code_line"
+        },
+        {
+          "region": "line_4",
+          "label": "code_line"
+        },
+        {
+          "region": "line_5",
+          "label": "code_line"
+        },
+        {
+          "region": "line_6",
+          "label": "code_line"
+        },
+        {
+          "region": "line_7",
+          "label": "code_line"
+        },
+        {
+          "region": "line_8",
+          "label": "code_line"
+        },
+        {
+          "region": "line_9",
+          "label": "code_line"
+        },
+        {
+          "region": "line_10",
+          "label": "code_line"
+        },
+        {
+          "region": "line_11",
+          "label": "code_line"
+        },
+        {
+          "region": "line_12",
+          "label": "code_line"
+        },
+        {
+          "region": "line_13",
+          "label": "code_line"
+        },
+        {
+          "region": "line_14",
+          "label": "code_line"
+        },
+        {
+          "region": "line_15",
+          "label": "code_line"
+        },
+        {
+          "region": "line_16",
+          "label": "code_line"
+        },
+        {
+          "region": "line_17",
+          "label": "code_line"
+        },
+        {
+          "region": "line_18",
+          "label": "code_line"
+        },
+        {
+          "region": "line_19",
+          "label": "code_line"
+        },
+        {
+          "region": "line_20",
+          "label": "code_line"
+        },
+        {
+          "region": "line_21",
+          "label": "code_line"
+        },
+        {
+          "region": "line_22",
+          "label": "code_line"
+        }
+      ]
+    },
+    {
+      "stimulus_id": "vehicle_python",
+      "ground_truth": [
+        {
+          "region": "line_1",
+          "label": "code_line"
+        },
+        {
+          "region": "line_2",
+          "label": "code_line"
+        },
+        {
+          "region": "line_3",
+          "label": "code_line"
+        },
+        {
+          "region": "line_4",
+          "label": "code_line"
+        },
+        {
+          "region": "line_5",
+          "label": "code_line"
+        },
+        {
+          "region": "line_6",
+          "label": "code_line"
+        },
+        {
+          "region": "line_7",
+          "label": "code_line"
+        },
+        {
+          "region": "line_8",
+          "label": "code_line"
+        },
+        {
+          "region": "line_9",
+          "label": "code_line"
+        },
+        {
+          "region": "line_10",
+          "label": "code_line"
+        },
+        {
+          "region": "line_11",
+          "label": "code_line"
+        },
+        {
+          "region": "line_12",
+          "label": "code_line"
+        },
+        {
+          "region": "line_13",
+          "label": "code_line"
+        },
+        {
+          "region": "line_14",
+          "label": "code_line"
+        }
+      ]
+    },
+    {
+      "stimulus_id": "vehicle_scala",
+      "ground_truth": [
+        {
+          "region": "line_1",
+          "label": "code_line"
+        },
+        {
+          "region": "line_2",
+          "label": "code_line"
+        },
+        {
+          "region": "line_3",
+          "label": "code_line"
+        },
+        {
+          "region": "line_4",
+          "label": "code_line"
+        },
+        {
+          "region": "line_5",
+          "label": "code_line"
+        },
+        {
+          "region": "line_6",
+          "label": "code_line"
+        },
+        {
+          "region": "line_7",
+          "label": "code_line"
+        },
+        {
+          "region": "line_8",
+          "label": "code_line"
+        },
+        {
+          "region": "line_9",
+          "label": "code_line"
+        },
+        {
+          "region": "line_10",
+          "label": "code_line"
+        },
+        {
+          "region": "line_11",
+          "label": "code_line"
+        },
+        {
+          "region": "line_12",
+          "label": "code_line"
+        },
+        {
+          "region": "line_13",
+          "label": "code_line"
+        },
+        {
+          "region": "line_14",
+          "label": "code_line"
+        },
+        {
+          "region": "line_15",
+          "label": "code_line"
+        },
+        {
+          "region": "line_16",
+          "label": "code_line"
+        },
+        {
+          "region": "line_17",
+          "label": "code_line"
+        },
+        {
+          "region": "line_18",
+          "label": "code_line"
+        }
+      ]
+    }
+  ]
+}

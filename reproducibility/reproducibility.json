@@ -1,0 +1,8 @@
+{
+  "$schema": "../schemas/reproducibility.schema.json",
+  "data_availability": "Converted from included EMIP dataset subset.",
+  "code_availability": "This repository",
+  "environment": "Python 3",
+  "replication_instructions": "Run utils/convert_emip_to_replet.py",
+  "doi": "unknown"
+}

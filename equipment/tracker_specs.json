@@ -1,0 +1,8 @@
+{
+  "$schema": "../schemas/tracker_specs.schema.json",
+  "manufacturer": "unknown",
+  "model": "unknown",
+  "sampling_rate_hz": 60,
+  "accuracy_deg": 0.5,
+  "firmware_version": "unknown"
+}

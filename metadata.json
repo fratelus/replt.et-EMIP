@@ -1,0 +1,21 @@
+{
+  "$schema": "./schemas/metadata.schema.json",
+  "study_title": "EMIP to REPL.et Conversion",
+  "study_objective": "Provide EMIP dataset in REPL.et standard format.",
+  "paradigm": "code comprehension",
+  "task_description": "Read code image and answer comprehension questions.",
+  "keywords": [
+    "eye-tracking",
+    "code comprehension",
+    "EMIP",
+    "REPL.et"
+  ],
+  "authors": [
+    {
+      "name": "EMIP Team",
+      "orcid": "0000-0000-0000-0000"
+    }
+  ],
+  "date": "2025-01-01",
+  "license": "CC BY 4.0"
+}

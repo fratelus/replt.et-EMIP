@@ -1,0 +1,14 @@
+{
+  "$schema": "../schemas/preprocessing.schema.json",
+  "steps": [
+    {
+      "step": "import",
+      "method": "convert_from_emip",
+      "parameters": {
+        "source": "EMIP",
+        "version": "unknown"
+      }
+    }
+  ],
+  "software_used": "custom_python_script"
+}

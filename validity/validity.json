@@ -1,0 +1,15 @@
+{
+  "$schema": "../schemas/validity.schema.json",
+  "threats": [
+    {
+      "type": "construct",
+      "description": "Stimuli are images of code, not editable code."
+    }
+  ],
+  "limitations": [
+    "Equipment defaults used; exact EMIP hardware not encoded."
+  ],
+  "confounding_factors": [
+    "Programming experience variability"
+  ]
+}

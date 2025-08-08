@@ -1,0 +1,11 @@
+{
+  "$schema": "../schemas/screen_setup.schema.json",
+  "screen_size_inch": 24.0,
+  "resolution_px": [
+    1920,
+    1080
+  ],
+  "refresh_rate_hz": 60,
+  "distance_cm": 60.0,
+  "background_color": "#FFFFFF"
+}
