@@ -1,6 +1,6 @@
 {
   "$schema": "./schemas/metadata.schema.json",
-  "study_title": "EMIP to REPL.et Conversion",
+  "study_title": "EMIP Dataset in REPL.et Format",
   "study_objective": "Provide EMIP dataset in REPL.et standard format.",
   "paradigm": "code comprehension",
   "task_description": "Read code image and answer comprehension questions.",

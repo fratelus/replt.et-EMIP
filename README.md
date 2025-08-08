@@ -1,6 +1,6 @@
-# Repl.ET: Eye Tracking Research Template
+# replt.et EMIP: EMIP Dataset in REPL.et Format
 
-A standardized template for organizing and sharing eye tracking research data in Software Engineering and Human-Computer Interaction studies.
+EMIP (Eye Movement in Programming) dataset converted to the standardized REPL.et format for reproducible eye tracking research in software engineering.
 
 ## Template Compliance Analysis
 
