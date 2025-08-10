@@ -5,7 +5,17 @@ Copyright (c) 2024 Repl.ET Project
 This work is licensed under the Creative Commons Attribution 4.0 International License.
 You are free to copy, redistribute, remix, transform, and build upon this material for any purpose, even commercially, provided that you give appropriate credit to the original author(s), provide a link to the license, and indicate if changes were made.
 
-You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+Attribution:
+This repository includes data from the Eye Movements in Programming (EMIP) dataset:
+
+Bednarik, Roman, et al. "EMIP: The eye movements in programming dataset."
+Science of Computer Programming 198 (2020): 102520.
+https://doi.org/10.1016/j.scico.2020.102520
+
+The EMIP dataset is licensed under the Creative Commons Attribution 4.0 International License:
+https://creativecommons.org/licenses/by/4.0/
+
+You may provide attribution in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 
 No additional legal terms or technological measures may be applied that restrict others from exercising the rights granted by this license.
 
