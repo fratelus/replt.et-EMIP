@@ -40,21 +40,32 @@ All original code, schemas, and documentation in this repository are also licens
 - ❌ **Missing** (<50%): Requires attention  
 
 ---
+<div align="center">
 
-## 📊 Reproducibility Spider Graph
+<table>
+<tr>
+<td align="center" valign="middle">
+  <img src="outputs/score.png" alt="Reproducibility Spider Graph" width="420">
+</td>
+<td align="center" valign="middle">
 
-![Reproducibility Spider Graph](outputs/score.png)
+| Study Component            | Score   |
+|----------------------------|---------|
+| Study Metadata             | 100.0%  |
+| Participant Info           | 100.0%  |
+| Equipment Specs            | 100.0%  |
+| Stimuli & Materials        | 100.0%  |
+| Areas of Interest          | 75.0%   |
+| Data Quality & Collection  | 75.0%   |
+| Data Preprocessing         | 75.0%   |
+| Statistical Analysis       | 50.0%   |
+| Validity Assessment        | 100.0%  |
+| Reproducibility Materials  | 100.0%  |
+| **Overall Study Score**    | **87.5%** |
 
-| Study Component         | Score   |
-|------------------------|---------|
-| Study Metadata         | 100.0%  |
-| Participant Info       | 100.0%  |
-| Equipment Specs        | 100.0%  |
-| Stimuli & Materials    | 100.0%  |
-| Areas of Interest      | 75.0%   |
-| Data Quality & Collection | 75.0% |
-| Data Preprocessing     | 75.0%   |
-| Statistical Analysis   | 50.0%   |
-| Validity Assessment    | 100.0%  |
-| Reproducibility Materials | 100.0%|
-| **Overall Study Score**| **87.5%** |
+</td>
+</tr>
+</table>
+
+</div>
+
